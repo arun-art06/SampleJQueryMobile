@@ -149,9 +149,29 @@
 
 
         jQuery(function ($) {
+            $.each(menu, function (i, row) {
+                console.log(JSON.stringify(row));
+                $('#main-menu-list').append('<li><a href="' + row.page + '"  data-transition="slide"  ><img  src="' + row.url + '"/><div ><h3>' + row.title + '</h3><p>' + row.description + '</p></div></a></li>');
+                //$('#movie-list').append('<li><a href="#">Acura</a></li>');
+            });
+            
 
+            $.each(biriyani, function (i, row) {
+                console.log(JSON.stringify(row));
+                $('#special-menu-list').append('<li><img  src="' + row.photo + '"/><div ><h3>' + row.name + '</h3><p>' + row.amount + '</p></div></li>');
+            });
+
+            
+
+            $.each(drinks, function (i, row) {
+                console.log(JSON.stringify(row));
+                $('#coffee-menu-list').append('<li><img  src="' + row.photo + '"/><div ><h3>' + row.name + '</h3><p>' + row.amount + '</p></div></li>'); 
+            });
+
+            //$('#special-menu-list').listview('refresh');
+            //$('#main-menu-list').listview('refresh');
+            //$('#coffee-menu-list').listview('refresh');
         });
-
     </script>
 </head>
 <body>
@@ -163,16 +183,15 @@
         <div data-role="content">
             <div class="anjappar-logo">&nbsp;</div>
         </div>
-        <div data-theme="a" data-role="footer">            
+        <div data-theme="a" data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
-                    <li><a href="#mainMenu" class="ui-btn ui-icon-grid ui-btn-icon-left">Menu</a></li>
-                    <li><a href="#" class="ui-btn ui-icon-m-fork ui-btn-icon-left">Main</a></li>
-                    <li><a href="#" class="ui-btn ui-icon-m-cup ui-btn-icon-left">Soups</a></li>
+                    <li><a href="#home" data-transition="flip" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#mainMenu" data-transition="flip" class="ui-btn ui-icon-grid ui-btn-icon-left">Menu</a></li>
+                    <li><a href="#special" data-transition="flip" class="ui-btn ui-icon-m-fork ui-btn-icon-left">Main</a></li>
+                    <li><a href="#cofee" data-transition="flip" class="ui-btn ui-icon-m-cup ui-btn-icon-left">Soups</a></li>
                 </ul>
             </div>
-            <!-- /navbar -->
         </div>
     </div>
     <div data-role="page" id="mainMenu">
@@ -181,21 +200,62 @@
             </h3>
         </div>
         <div data-role="content">
-            <div class="example-wrapper" data-iscroll>
-                <ul data-role="listview" data-inset="true" id="movie-list" data-theme="a">
+            <div class="example-wrapper " data-iscroll>
+                <ul data-role="listview" data-inset="true" id="main-menu-list" class="list" data-theme="b">
+                </ul>
+            </div>
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="flip" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#mainMenu" data-transition="flip" class="ui-btn ui-icon-grid ui-btn-icon-left">Menu</a></li>
+                    <li><a href="#special" data-transition="flip" class="ui-btn ui-icon-m-fork ui-btn-icon-left">Main</a></li>
+                    <li><a href="#cofee" data-transition="flip" class="ui-btn ui-icon-m-cup ui-btn-icon-left">Soups</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div data-role="page" id="headline">
+    <div data-role="page" id="special">
         <div data-theme="a" data-role="header">
-            <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a>
-            <h3>Movie Info
+              <a href="#mainMenu" class="ui-btn ui-btn-left  ui-icon-arrow-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            <h3>Today's Special
             </h3>
         </div>
         <div data-role="content">
-            <ul data-role="listview" data-inset="true" id="movie-data" data-theme="a">
+            <ul data-role="listview" data-inset="true" id="special-menu-list" data-theme="a">
             </ul>
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="flip" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#mainMenu" data-transition="flip" class="ui-btn ui-icon-grid ui-btn-icon-left">Menu</a></li>
+                    <li><a href="#special" data-transition="flip" class="ui-btn ui-icon-m-fork ui-btn-icon-left">Main</a></li>
+                    <li><a href="#cofee" data-transition="flip" class="ui-btn ui-icon-m-cup ui-btn-icon-left">Soups</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="cofee">
+        <div data-theme="a" data-role="header">
+            <a href="#mainMenu" class="ui-btn ui-btn-left  ui-icon-arrow-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            <h3>Hot drinks
+            </h3>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" id="coffee-menu-list" data-theme="a">
+            </ul>
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="flip" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#mainMenu" data-transition="flip" class="ui-btn ui-icon-grid ui-btn-icon-left">Menu</a></li>
+                    <li><a href="#special" data-transition="flip" class="ui-btn ui-icon-m-fork ui-btn-icon-left">Main</a></li>
+                    <li><a href="#cofee" data-transition="flip" class="ui-btn ui-icon-m-cup ui-btn-icon-left">Soups</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

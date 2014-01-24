@@ -254,10 +254,11 @@ html .ui-bar-a .ui-body-inherit,
 html .ui-body-a .ui-body-inherit,
 html body .ui-group-theme-a .ui-body-inherit,
 html .ui-panel-page-container-a {
-	background: #c2f680 /*{a-body-background-color}*/;
+	background-image: url('images/white-trans.png') ;
+    background-repeat:repeat;
 	border-color: #6a8746 /*{a-body-border}*/;
 	color: #000000 /*{a-body-color}*/;
-	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #eeeeee /*{a-body-shadow-color}*/;
+	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #777777 /*{a-body-shadow-color}*/;
 }
 .ui-body-a {
 	border-width: 1px;
@@ -316,6 +317,29 @@ html head + body .ui-btn.ui-btn-a:hover {
 	color: #000000 /*{a-bhover-color}*/;
 	text-shadow: 0 /*{a-bhover-shadow-x}*/ 1px /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #eeeeee /*{a-bhover-shadow-color}*/;
 }
+
+.list .ui-btn,
+.list  .ui-btn,
+.list .ui-btn,
+.list .ui-btn,
+.list ui-btn-a {
+	background-image: url('images/white-trans.png') ;
+    background-repeat:repeat;
+	color: #000000 /*{a-bhover-color}*/;
+	text-shadow: 0 /*{a-bhover-shadow-x}*/ 1px /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #777777 /*{a-bhover-shadow-color}*/;
+}
+
+.list .ui-btn:hover,
+.list  .ui-btn:hover,
+.list .ui-btn:hover,
+.list .ui-btn:hover,
+.list ui-btn-a:hover {
+	background-image: url('images/black-trans.png') ;
+    background-repeat:repeat;
+	color: #FFFFFF /*{a-bhover-color}*/;
+	text-shadow: 0 /*{a-bhover-shadow-x}*/ 1px /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #000000 /*{a-bhover-shadow-color}*/;
+}
+
 /* Button down */
 .ui-page-theme-a .ui-btn:active,
 html .ui-bar-a .ui-btn:active,
