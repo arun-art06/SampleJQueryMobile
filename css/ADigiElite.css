@@ -241,7 +241,7 @@ html body .ui-group-theme-a .ui-bar-inherit {
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper {
 	/*background: #603813 {a-page-background-color};*/
-    background-image: url('images/background.jpg') /*{a-page-background-color}*/;
+    background-image: url('images/back-dark1.png') /*{a-page-background-color}*/;
     background-position:center;
 	border-color: #603813 /*{a-page-border}*/;
 	color: #ffffff /*{a-page-color}*/;
